@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import movingTruck from "../assets/truck-moving.png";
 import whietMovingTruck from "../assets/white-truck-moving.png";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Header({ scrollToSection, refs }) {
   const [open, setOpen] = useState(false);
@@ -63,20 +64,20 @@ export default function Header({ scrollToSection, refs }) {
               <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-50 animate-slide-down">
                 <ul className="flex flex-col">
                   <li>
-                    <a
-                      href="#login"
+                    <Link
+                      to={`/login`}
                       className="block px-4 py-2 text-gray-700 hover:bg-sky-100 rounded-t-lg"
                     >
                       Login
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#signup"
+                    <Link
+                      to={`/signup`}
                       className="block px-4 py-2 text-gray-700 hover:bg-sky-100 rounded-b-lg"
                     >
                       Signup
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
